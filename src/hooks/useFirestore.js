@@ -17,6 +17,8 @@ const useFirestore = (collection) => {
       });
 
     return () => unsub();
+    // this is a clean-up function that react will run when
+    // a component using the hook unmounts
   }, [collection]);
 
   return { docs };
